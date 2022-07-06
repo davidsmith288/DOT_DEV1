@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="DOTTicketCube" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="DOTTicketCube"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Tickets">
+    <resourceUri>Tickets</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="TicketID"/>
+      <viewAttribute id="TicketStatus"/>
+      <viewAttribute id="OriginatorEmail"/>
+      <viewAttribute id="ConversationID"/>
+      <viewAttribute id="Origin"/>
+      <viewAttribute id="EmailOrID"/>
+      <viewAttribute id="Subject"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Tickets"/>
+  </calculationView>
+</calculationViews>
+
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="TicketStatus" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TicketStatus"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TicketStatus"/>
+    </attribute>
+    <attribute id="OriginatorEmail" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OriginatorEmail"/>
+      <keyMapping columnObjectName="Projection_1" columnName="OriginatorEmail"/>
+    </attribute>
+    <attribute id="Origin" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Origin"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Origin"/>
+    </attribute>
+    <attribute id="EmailOrID" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EmailOrID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="EmailOrID"/>
+    </attribute>
+    <attribute id="Subject" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Subject"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Subject"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="TicketID" order="6" aggregationType="count" measureType="simple" engineAggregation="sum">
+      <descriptions defaultDescription="TicketID"/>
+      <measureMapping columnObjectName="Projection_1" columnName="TicketID"/>
+    </measure>
+    <measure id="ConversationID" order="7" aggregationType="count" measureType="simple">
+      <descriptions defaultDescription="ConversationID"/>
+      <measureMapping columnObjectName="Projection_1" columnName="ConversationID"/>
+    </measure></baseMeasures>
+  <calculatedMeasures>
+    <measure id="CC_1" order="8" aggregationType="sum" measureType="simple" datatype="BIGINT" expressionLanguage="SQL">
+      <formula>&quot;TicketID&quot;</formula>
+      </measure>
+  </calculatedMeasures>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="100" y="230"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

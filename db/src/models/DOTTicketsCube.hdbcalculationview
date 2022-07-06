@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="DOTTicketsCube" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="DOTTicketsCube"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="TicketLog">
+    <resourceUri>TicketLog</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="TicketID"/>
+      <viewAttribute id="EventDT"/>
+      <viewAttribute id="Status"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="TicketLog"/>
+  </calculationView>
+</calculationViews>
+
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="Status" order="1" displayAttribute="false" attributeHierarchyActive="false" semanticType="empty">
+      <descriptions defaultDescription="Status"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Status"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes>
+    <calculatedAttribute id="CC_MONTHNAMEFROMTIMESTAMP" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="NVARCHAR" expressionLanguage="SQL" length="13">
+        <formula>TO_NVARCHAR(MONTHNAME(&quot;EventDT&quot;))</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+  </calculatedAttributes>
+  <baseMeasures>
+    <measure id="TicketID" order="3" aggregationType="sum" measureType="simple" engineAggregation="none">
+      <descriptions defaultDescription="TicketID"/>
+      <measureMapping columnObjectName="Projection_1" columnName="TicketID"/>
+    </measure>
+    <measure id="EventDT" order="4" aggregationType="min" measureType="simple">
+      <descriptions defaultDescription="EventDT"/>
+      <measureMapping columnObjectName="Projection_1" columnName="EventDT"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures>
+    <measure id="Type" order="5" aggregationType="sum" measureType="simple" datatype="INTEGER" expressionLanguage="SQL">
+      <formula>&quot;TicketID&quot;</formula>
+    </measure>
+  </calculatedMeasures>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="100" y="253"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
