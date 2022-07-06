@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="DOT1" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="DOT1"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Products">
+    <resourceUri>Products</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+
+<logicalModel id="Products">
+  <attributes>
+    <attribute id="ProductID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ProductID"/>
+      <keyMapping columnObjectName="Products" columnName="ProductID"/>
+    </attribute>
+    <attribute id="UsualName" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UsualName"/>
+      <keyMapping columnObjectName="Products" columnName="UsualName"/>
+    </attribute>
+    <attribute id="AKA1" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AKA1"/>
+      <keyMapping columnObjectName="Products" columnName="AKA1"/>
+    </attribute>
+    <attribute id="AKA2" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AKA2"/>
+      <keyMapping columnObjectName="Products" columnName="AKA2"/>
+    </attribute>
+    <attribute id="AKA3" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AKA3"/>
+      <keyMapping columnObjectName="Products" columnName="AKA3"/>
+    </attribute>
+    <attribute id="AKA4" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AKA4"/>
+      <keyMapping columnObjectName="Products" columnName="AKA4"/>
+    </attribute>
+    <attribute id="AKA5" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AKA5"/>
+      <keyMapping columnObjectName="Products" columnName="AKA5"/>
+    </attribute>
+    <attribute id="MarketPillar" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MarketPillar"/>
+      <keyMapping columnObjectName="Products" columnName="MarketPillar"/>
+    </attribute>
+    <attribute id="ProductType" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ProductType"/>
+      <keyMapping columnObjectName="Products" columnName="ProductType"/>
+    </attribute>
+    <attribute id="From" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="From"/>
+      <keyMapping columnObjectName="Products" columnName="From"/>
+    </attribute>
+    <attribute id="To" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="To"/>
+      <keyMapping columnObjectName="Products" columnName="To"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>

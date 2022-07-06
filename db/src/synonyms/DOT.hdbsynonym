@@ -1,0 +1,128 @@
+{
+  "AppLog": {
+    "target": {
+      "object": "AppLog",
+      "schema": "DBADMIN"
+    }
+  },
+  "AuthorizedEmails": {
+    "target": {
+      "object": "AuthorizedEmails",
+      "schema": "DBADMIN"
+    }
+  },
+  "Competences": {
+    "target": {
+      "object": "Competences",
+      "schema": "DBADMIN"
+    }
+  },
+  "DOTResources": {
+    "target": {
+      "object": "DOTResources",
+      "schema": "DBADMIN"
+    }
+  },
+  "DOT_Mails": {
+    "target": {
+      "object": "DOT_Mails",
+      "schema": "DBADMIN"
+    }
+  },
+  "DocumentFeedback": {
+    "target": {
+      "object": "DocumentFeedback",
+      "schema": "DBADMIN"
+    }
+  },
+  "Documents": {
+    "target": {
+      "object": "Documents",
+      "schema": "DBADMIN"
+    }
+  },
+  "DocumentsProducts": {
+    "target": {
+      "object": "DocumentsProducts",
+      "schema": "DBADMIN"
+    }
+  },
+  "DocumentsQuestions": {
+    "target": {
+      "object": "DocumentsQuestions",
+      "schema": "DBADMIN"
+    }
+  },
+  "DocumentsThesaurus": {
+    "target": {
+      "object": "DocumentsThesaurus",
+      "schema": "DBADMIN"
+    }
+  },
+  "Products": {
+    "target": {
+      "object": "Products",
+      "schema": "DBADMIN"
+    }
+  },
+  "ProductsThesaurus": {
+    "target": {
+      "object": "ProductsThesaurus",
+      "schema": "DBADMIN"
+    }
+  },
+  "QuestionsTemplates": {
+    "target": {
+      "object": "QuestionsTemplates",
+      "schema": "DBADMIN"
+    }
+  },
+  "Thesaurus": {
+    "target": {
+      "object": "Thesaurus",
+      "schema": "DBADMIN"
+    }
+  },
+  "TicketDOTResource": {
+    "target": {
+      "object": "TicketDOTResource",
+      "schema": "DBADMIN"
+    }
+  },
+  "TicketLog": {
+    "target": {
+      "object": "TicketLog",
+      "schema": "DBADMIN"
+    }
+  },
+  "TicketThesaurus": {
+    "target": {
+      "object": "TicketThesaurus",
+      "schema": "DBADMIN"
+    }
+  },
+  "Tickets": {
+    "target": {
+      "object": "Tickets",
+      "schema": "DBADMIN"
+    }
+  },
+  "WRK_DocumentsPowerGrep": {
+    "target": {
+      "object": "WRK_DocumentsPowerGrep",
+      "schema": "DBADMIN"
+    }
+  },
+  "WRK_DocumentsTerms": {
+    "target": {
+      "object": "WRK_DocumentsTerms",
+      "schema": "DBADMIN"
+    }
+  },
+  "WRK_Thesaurus": {
+    "target": {
+      "object": "WRK_Thesaurus",
+      "schema": "DBADMIN"
+    }
+  }
+}
