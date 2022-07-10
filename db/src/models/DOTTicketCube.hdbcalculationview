@@ -8,6 +8,7 @@
     <resourceUri>Tickets</resourceUri>
   </DataSource>
 </dataSources>
+<snapshotProcedures/>
 <calculationViews>
   <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
     <viewAttributes>
@@ -46,20 +47,24 @@
       <descriptions defaultDescription="Subject"/>
       <keyMapping columnObjectName="Projection_1" columnName="Subject"/>
     </attribute>
+  
+    <attribute id="ConversationID" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ConversationID"/>
+  
+      <keyMapping columnObjectName="Projection_1" columnName="ConversationID"/>
+  
+    </attribute>
   </attributes>
   <calculatedAttributes/>
   <baseMeasures>
     <measure id="TicketID" order="6" aggregationType="count" measureType="simple" engineAggregation="sum">
       <descriptions defaultDescription="TicketID"/>
       <measureMapping columnObjectName="Projection_1" columnName="TicketID"/>
-    </measure>
-    <measure id="ConversationID" order="7" aggregationType="count" measureType="simple">
-      <descriptions defaultDescription="ConversationID"/>
-      <measureMapping columnObjectName="Projection_1" columnName="ConversationID"/>
     </measure></baseMeasures>
   <calculatedMeasures>
-    <measure id="CC_1" order="8" aggregationType="sum" measureType="simple" datatype="BIGINT" expressionLanguage="SQL">
-      <formula>&quot;TicketID&quot;</formula>
+    <measure id="TicketCount" order="8" aggregationType="sum" measureType="simple" datatype="BIGINT" expressionLanguage="SQL">
+      <formula>1</formula>
+      
       </measure>
   </calculatedMeasures>
   <restrictedMeasures/>

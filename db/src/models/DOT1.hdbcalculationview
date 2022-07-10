@@ -8,6 +8,7 @@
     <resourceUri>Products</resourceUri>
   </DataSource>
 </dataSources>
+<snapshotProcedures/>
 <calculationViews/>
 
 <logicalModel id="Products">
