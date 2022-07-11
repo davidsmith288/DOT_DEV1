@@ -47,6 +47,10 @@
       <descriptions defaultDescription="Subject"/>
       <keyMapping columnObjectName="Projection_1" columnName="Subject"/>
     </attribute>
+    <attribute id="TicketID" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TicketID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TicketID"/>
+    </attribute>
   
     <attribute id="ConversationID" order="7" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ConversationID"/>
@@ -56,13 +60,9 @@
     </attribute>
   </attributes>
   <calculatedAttributes/>
-  <baseMeasures>
-    <measure id="TicketID" order="6" aggregationType="count" measureType="simple" engineAggregation="sum">
-      <descriptions defaultDescription="TicketID"/>
-      <measureMapping columnObjectName="Projection_1" columnName="TicketID"/>
-    </measure></baseMeasures>
+  <baseMeasures/>
   <calculatedMeasures>
-    <measure id="TicketCount" order="8" aggregationType="sum" measureType="simple" datatype="BIGINT" expressionLanguage="SQL">
+    <measure id="TicketCount" order="8" aggregationType="sum" measureType="simple" datatype="INTEGER" expressionLanguage="SQL">
       <formula>1</formula>
       
       </measure>

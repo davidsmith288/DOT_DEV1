@@ -27,6 +27,13 @@
       <descriptions defaultDescription="Status"/>
       <keyMapping columnObjectName="Projection_1" columnName="Status"/>
     </attribute>
+  
+    <attribute id="TicketID" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TicketID"/>
+  
+      <keyMapping columnObjectName="Projection_1" columnName="TicketID"/>
+  
+    </attribute>
   </attributes>
   <calculatedAttributes>
     <calculatedAttribute id="CC_MONTHNAMEFROMTIMESTAMP" order="2" displayAttribute="false" attributeHierarchyActive="false">
@@ -36,18 +43,14 @@
     </calculatedAttribute>
   </calculatedAttributes>
   <baseMeasures>
-    <measure id="TicketID" order="3" aggregationType="sum" measureType="simple" engineAggregation="none">
-      <descriptions defaultDescription="TicketID"/>
-      <measureMapping columnObjectName="Projection_1" columnName="TicketID"/>
-    </measure>
     <measure id="EventDT" order="4" aggregationType="min" measureType="simple">
       <descriptions defaultDescription="EventDT"/>
       <measureMapping columnObjectName="Projection_1" columnName="EventDT"/>
     </measure>
   </baseMeasures>
   <calculatedMeasures>
-    <measure id="Type" order="5" aggregationType="sum" measureType="simple" datatype="INTEGER" expressionLanguage="SQL">
-      <formula>&quot;TicketID&quot;</formula>
+    <measure id="TicketCount" order="5" aggregationType="sum" measureType="simple" datatype="INTEGER" expressionLanguage="SQL">
+      <formula>1</formula>
     </measure>
   </calculatedMeasures>
   <restrictedMeasures/>
